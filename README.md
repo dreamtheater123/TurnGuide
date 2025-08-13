@@ -1,5 +1,5 @@
 # TurnGuide
-[![arXiv](https://img.shields.io/badge/arXiv-2501.04962-red)](https://arxiv.org/abs/2508.07375)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.07375-red)](https://arxiv.org/abs/2508.07375)
 
 Github repository for paper: [Think Before You Talk: Enhancing Meaningful Dialogue Generation in Full-Duplex Speech Language Models with Planning-Inspired Text Guidance](https://arxiv.org/abs/2508.07375)
 
