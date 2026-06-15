@@ -76,7 +76,7 @@ pip install -r requirements.txt
 git clone https://huggingface.co/zai-org/glm-4-voice-decoder
 
 python turnguide_inference.py \
-  --input-audio path/to/input.wav \
+  --input-audio examples/audio/fe_03_05844_first_2min_left.wav \
   --model-path qqjz/turnguide_loss_2_1 \
   --tokenizer-path zai-org/glm-4-voice-tokenizer \
   --flow-path ./glm-4-voice-decoder \
@@ -84,6 +84,8 @@ python turnguide_inference.py \
 ```
 
 To use the 3:1 checkpoint, replace `--model-path qqjz/turnguide_loss_2_1` with `--model-path qqjz/turnguide_loss_3_1`. You can also pass a local checkpoint directory.
+
+This repository includes `examples/audio/fe_03_05844_first_2min_left.wav` as a small example input for the inference command above. You can replace it with any mono user-audio WAV file.
 
 ## Data
 

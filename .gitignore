@@ -28,6 +28,7 @@ outputs/
 turnguide_demo_output/
 error_input_ids/
 *.wav
+!examples/audio/fe_03_05844_first_2min_left.wav
 *.mp3
 *.flac
 *_output.txt
