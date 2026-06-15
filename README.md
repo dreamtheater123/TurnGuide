@@ -1,7 +1,8 @@
 # TurnGuide
 
 [![arXiv](https://img.shields.io/badge/arXiv-2508.07375-red)](https://arxiv.org/abs/2508.07375)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-qqjz%2Fturnguide_loss_2_1-yellow)](https://huggingface.co/qqjz/turnguide_loss_2_1)
+[![Hugging Face 2:1](https://img.shields.io/badge/%F0%9F%A4%97%20HF-qqjz%2Fturnguide_loss_2_1-yellow)](https://huggingface.co/qqjz/turnguide_loss_2_1)
+[![Hugging Face 3:1](https://img.shields.io/badge/%F0%9F%A4%97%20HF-qqjz%2Fturnguide_loss_3_1-yellow)](https://huggingface.co/qqjz/turnguide_loss_3_1)
 
 ## News
 
@@ -25,9 +26,17 @@ The model weights are not included in this repository. Download the GLM-4-Voice 
 
 Model assets:
 
-- TurnGuide checkpoint: [qqjz/turnguide_loss_2_1](https://huggingface.co/qqjz/turnguide_loss_2_1)
+- TurnGuide checkpoint, loss ratio 2:1: [qqjz/turnguide_loss_2_1](https://huggingface.co/qqjz/turnguide_loss_2_1)
+- TurnGuide checkpoint, loss ratio 3:1: [qqjz/turnguide_loss_3_1](https://huggingface.co/qqjz/turnguide_loss_3_1)
 - GLM-4-Voice tokenizer: [zai-org/glm-4-voice-tokenizer](https://huggingface.co/zai-org/glm-4-voice-tokenizer)
 - GLM-4-Voice decoder: [zai-org/glm-4-voice-decoder](https://huggingface.co/zai-org/glm-4-voice-decoder)
+
+The two TurnGuide checkpoints differ only in the training loss ratio between text tokens and speech tokens:
+
+- `qqjz/turnguide_loss_2_1`: text:speech token loss ratio = 2:1
+- `qqjz/turnguide_loss_3_1`: text:speech token loss ratio = 3:1
+
+Both checkpoints can be used with the same inference script by changing `--model-path`.
 
 ## Environment
 
@@ -72,7 +81,7 @@ python turnguide_inference.py \
   --output-dir ./turnguide_demo_output
 ```
 
-For a fine-tuned TurnGuide checkpoint, replace `--model-path` with the local checkpoint directory.
+To use the 3:1 checkpoint, replace `--model-path qqjz/turnguide_loss_2_1` with `--model-path qqjz/turnguide_loss_3_1`. You can also pass a local checkpoint directory.
 
 ## Data
 
@@ -90,3 +99,14 @@ Download [Fisher](https://catalog.ldc.upenn.edu/LDC2004S13) and [Candor](https:/
 ## Acknowledgements and license
 
 This code release builds on [GLM-4-Voice](https://github.com/THUDM/GLM-4-Voice). The included GLM-4-Voice code is licensed under Apache-2.0. GLM-4-Voice model weights are governed by their own model license and must be downloaded separately.
+
+## Citation
+
+```bibtex
+@article{turnguide2026,
+  title={TurnGuide: Enhancing Meaningful Full Duplex Spoken Interactions via Dynamic Turn-Level Text-Speech Interleaving},
+  author={Cui, Wenqian and Zhu, Lei and Li, Xiao-Hui and Guo, Zhihan and Bai, Haoli and Hou, Lu and King, Irwin},
+  journal={arXiv preprint arXiv:2508.07375},
+  year={2026}
+}
+```
