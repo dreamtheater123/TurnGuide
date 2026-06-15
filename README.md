@@ -47,6 +47,8 @@ conda env create -f environment.yml
 conda activate turnguide
 ```
 
+The environment pins `mkl<2025` because newer MKL builds can break PyTorch 2.5.0 imports with an `iJIT_NotifyEvent` symbol error. It also includes `tiktoken` for the TurnGuide tokenizer remote code and `ruamel.yaml==0.18.6` for GLM-4-Voice decoder config loading through HyperPyYAML.
+
 To check the core runtime versions:
 
 ```bash
