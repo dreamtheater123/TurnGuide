@@ -1,0 +1,45 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.env
+.venv/
+venv/
+env/
+
+# Model checkpoints and downloaded model assets
+/ckpts/
+/models/
+/glm-4-voice-9b/
+/glm-4-voice-tokenizer/
+/glm-4-voice-decoder/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+
+# Generated outputs
+outputs/
+turnguide_demo_output/
+error_input_ids/
+*.wav
+*.mp3
+*.flac
+*_output.txt
+
+# Experiment artifacts
+generated_ids_record*.json
+semantic_correctness_results_*.json
+trainer_state.json
+training_loss.png
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
